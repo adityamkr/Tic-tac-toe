@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-tac-toe</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Poppins:ital,wght@0,500;1,500&family=Roboto&display=swap"
+        rel="stylesheet">
+    <style>
+        #out-div {
+            width: 487px;
+            height: 394px;
+            /* border: 2px solid red; */
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            left: 454px;
+            top: 122px;
+            padding: 40px;
+        }
+
+        button {
+            /*  background-color:#cbe4e1;*/
+            color: #36c3d2;
+            background-color: #cbe4e1;
+            border-color: none;
+            border: 0px;
+
+        }
+
+        #bt-1 {
+            width: 112px;
+            height: 103px;
+            position: absolute;
+            left: 41px;
+            cursor: pointer;
+            top: 12px;
+            font-size: 80px;
+            overflow: hidden;
+        }
+
+
+        #bt-2 {
+            width: 112px;
+            height: 103px;
+            position: absolute;
+            left: 245px;
+            top: 12px;
+            cursor: pointer;
+            font-size: 80px;
+        }
+
+        #bt-3 {
+            font-size: 80px;
+            width: 112px;
+            height: 103px;
+            position: absolute;
+            left: 452px;
+            top: 12px;
+            cursor: pointer;
+        }
+
+        #bt-4 {
+            width: 112px;
+            height: 103px;
+            position: absolute;
+            left: 41px;
+            top: 182px;
+            cursor: pointer;
+            font-size: 80px;
+        }
+
+        #hr-1 {
+            position: absolute;
+            top: 130px;
+            width: 569px;
+            left: 0px;
+            margin: 0px;
+            border: 1px solid white;
+
+        }
+
+        #bt-5 {
+            width: 112px;
+            height: 103px;
+            position: absolute;
+            left: 244px;
+            top: 178px;
+            cursor: pointer;
+            font-size: 80px;
+        }
+
+        #bt-6 {
+            width: 112px;
+            height: 103px;
+            position: absolute;
+            left: 453px;
+            top: 172px;
+            cursor: pointer;
+            font-size: 80px;
+        }
+
+        #hr-2 {
+            position: absolute;
+            top: 300px;
+            width: 569px;
+            left: 0px;
+            margin: 0px;
+            color: white;
+            border: 1px solid white;
+
+
+        }
+
+        #bt-7 {
+            width: 112px;
+            height: 103px;
+            position: absolute;
+            left: 34px;
+            top: 358px;
+            cursor: pointer;
+            font-size: 80px;
+        }
+
+        #bt-8 {
+            width: 112px;
+            height: 103px;
+            position: absolute;
+            left: 243px;
+            top: 357px;
+            cursor: pointer;
+            font-size: 80px;
+        }
+
+        #bt-9 {
+            width: 112px;
+            height: 103px;
+            position: absolute;
+            left: 456px;
+            top: 358px;
+            cursor: pointer;
+            font-size: 80px;
+        }
+
+        #v-line1 {
+            height: 471px;
+            position: absolute;
+            width: 1px;
+            border: 1px solid white;
+            left: 189px;
+            top: 0px;
+        }
+
+        #v-line2 {
+            height: 471px;
+            position: absolute;
+            width: 1px;
+            border: 1px solid white;
+            left: 402px;
+            top: 0px;
+        }
+
+        .stylefont {
+            font-size: 25px;
+        }
+
+        #lbs {
+
+            font-size: 30px;
+            background-color: #cbe4e1;
+            position: absolute;
+            left: 570px;
+            top: 654px;
+            padding: 21px;
+            width: 358px;
+            text-align: center;
+            border-radius: 45px;
+            font-weight: 900;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 4px 16px 0 rgb(0 0 0 / 20%);
+        }
+
+        /*
+        #winner {
+            width: 607px;
+            height: 118px;
+            background-color: white;
+            position: absolute;
+            font-size: 90px;
+            left: -6px;
+            top: 164px;
+            background-color: #cbe4e1;
+            border-radius: -49px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 4px 16px 0 rgb(0 0 0 / 20%);
+        }
+        */
+        #winner {
+            left: 535px;
+            top: -29px;
+            display: inline-block;
+            position: absolute;
+            font-size: 70px;
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+          }
+    </style>
+</head>
+
+<body style="background-color:#CBE4E1">
+
+    <label id="lbs">Lets play Tic-Tac-Toe</label>
+
+    <div id="out-div">
+        <button id="bt-1" class="stylefont"></button>
+        <button id="bt-2" class="stylefont"></button>
+        <button id="bt-3" class="stylefont"></button>
+        <hr id="hr-1">
+        <button id="bt-4" class="stylefont"></button>
+        <button id="bt-5" class="stylefont"></button>
+        <button id="bt-6" class="stylefont"></button>
+        <hr id="hr-2">
+        <button id="bt-7" class="stylefont"></button>
+        <button id="bt-8" class="stylefont"></button>
+        <button id="bt-9" class="stylefont"></button>
+        <div id="v-line1"></div>
+        <div id="v-line2"></div>
+    </div>
+    <script src="tic-tec.js"></script>
+</body>
+
+</html>
